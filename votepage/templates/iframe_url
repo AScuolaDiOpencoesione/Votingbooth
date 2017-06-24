@@ -1,0 +1,10 @@
+<h3 class="heading">{{f.label}}</h3>
+{% if f.field %}
+<p><a  target="_blank" href="{{f.field}}" target="_blank">Link all'elaborato</a></p>
+<iframe src="{{f.field}}" style="border:0; width:100%; height:1000px;"></iframe>
+{% else %}
+
+<div class="alert alert-danger">
+  <strong>Attenzione! </strong>Non è presente un contenuto per questo elemento di valutazione
+</div>
+{% endif %}

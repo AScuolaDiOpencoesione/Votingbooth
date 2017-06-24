@@ -1,0 +1,12 @@
+
+<h3 class="heading">{{f.label}}</h3>
+<p>{{f.field|safe}}</p>
+<style>
+.alignright{
+	float:right;
+}
+
+.alignleft{
+	float:left;
+}
+</style>

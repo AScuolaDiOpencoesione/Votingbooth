@@ -1,0 +1,3 @@
+<h3>{{f.label}}</h3>
+<p>{{f.value|safe}}</p>
+<hr>

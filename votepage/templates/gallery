@@ -1,0 +1,13 @@
+<h3 class="heading">{{f.label}}</h3>
+{%if f.field %}
+{% for fi in f.field %}
+<div><img class="img-responsive" src="{{fi}}"></div>
+<div><a href="{{fi}}">Link all'originale</a></div>
+{% endfor %}
+{% else %}
+
+<div class="alert alert-danger">
+  <strong>Attenzione! </strong>Non è presente un contenuto per questo elemento di valutazione
+</div>
+
+{%endif%}

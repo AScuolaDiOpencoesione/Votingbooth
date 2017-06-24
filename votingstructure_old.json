@@ -1,0 +1,233 @@
+{
+	"db":"http://www.ascuoladiopencoesione.it/rest.php?",
+	"dimension":"ID_ASOC",
+	"shared":[{
+				"label":"Nome Team",
+				"type":"text",
+				"field":"nome_team"
+			},{
+				"label":"",
+				"type":"img",
+				"field":"immagine_profilo"
+			},{
+				"label":"Progetto OC",
+				"type":"text",
+				"field":"l1_titolo_del_progetto_scelto_su_opencoesione"
+			},{
+				"label":"",
+				"type":"url",
+				"field":"l1_link_al_progetto_scelto_su_opencoesione"
+			},{
+				"label":"",
+				"type":"text",
+				"field":"l1_CUP_del_progetto_scelto_su_opencoesione"
+			},{
+				"label":"Tema OC",
+				"type":"text",
+				"field":"l1_tema_del_progetto_da_opencoesione"
+			},{
+				"label":"Account Twitter",
+				"type":"twitter",
+				"field":"account_twitter"
+			},{
+				"label":"Account altro social",
+				"type":"url",
+				"field":"altro_social"
+			},{
+				"label":"Sito web (ove presente)",
+				"type":"url",
+				"field":""
+			}],
+	"structure":[{
+		"screen":"Capacità di sintesi creativa e comunicativa",
+		"screen_id":"schermata_1",
+		"fields":[
+			[{
+				"label":"Capacità di sintesi creativa e comunicativa",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Pitch",
+				"type":"text",
+				"field":""
+			},{
+				"label":"",
+				"type":"text",
+				"field":""
+			},{
+				"label":"",
+				"type":"text",
+				"field":""
+			},{
+				"label":"Le 5 immagini più significative",
+				"type":"repeater",
+				"field":"" 
+			},{
+				"label":"Elaborato creativo finale",
+				"type":"text",
+				"field":""
+			}]
+	]},{
+		"screen":"Capacità di progettazione",
+		"screen_id":"schermata_2",
+		"fields":[[{
+				"label":"Capacità di progettazione",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Titolo della ricerca",
+				"type":"text",
+				"field":"l1_titolo_della_ricerca_"
+			},{
+				"label":"La ricerca in 140 caratteri",
+				"type":"text",
+				"field":"l1_la_ricerca_in_140_caratteri"
+			},{
+				"label":"Canvas",
+				"type":"img",
+				"field":"l1_foto_del_canvas"
+			},{
+				"label":"La ricerca disegnata",
+				"type":"img",
+				"field":"l2_immagine_in_evidenza_2"
+			},{
+				"label":"Link al report lezione 1 completo",
+				"type":"iframe_url",
+				"field":"l1_url"
+			}]
+	]},{
+		"screen":"Schermata 3",
+		"screen_id":"schermata_3",
+		"fields":[[{
+				"label":"Capacità di contestualizzare la ricerca",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Blog Post - raccontare la ricerca di dati e informazioni",
+				"type":"text",
+				"field":"l2_blog_post_di_racconto_2"
+			},{
+				"label":"Fonti istituzionali",
+				"type":"url",
+				"field":"l2_link_fonte_isituzionale"
+			},{
+				"label":"",
+				"type":"url",
+				"field":"l2_link_fonte_istituzionale_2"
+			},{
+				"label":"",
+				"type":"url",
+				"field":"l2_link_fonte_istituzionale_3"
+			},{
+				"label":"Link altre fonti",
+				"type":"url",
+				"field":"l2_link_altre_fonti_1"
+			},{
+				"label":"",
+				"type":"url",
+				"field":"l2_link_altre_fonti_2"
+			},{
+				"label":"",
+				"type":"url",
+				"field":"l2_link_altre_fonti_3"
+			},{
+				"label":"Link allo schema di research design (allegato xls)",
+				"type":"file",
+				"field":"l2_Allegato_schema_Research_Design"
+			}]
+	]},{
+		"screen":"Schermata 4",
+		"screen_id":"schermata_4",
+		"fields":[[{
+				"label":"Visualizzazione Dati",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Articolo Datajournalism",
+				"type":"text",
+				"field":"l3_paragrafo_2_dati_"
+			},{
+				"label":"Visualizzazione interattiva (ove presente)",
+				"type":"oembed",
+				"field":"l3_oggetto_da_inserire_con_embed"
+			}]
+	]},{
+		"screen":"Schermata 5",
+		"screen_id":"schermata_5",
+		"fields":[[{
+				"label":"Livello di conivolgimento del territorio (eventi)",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Evento Open Data Day",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Data Evento",
+				"type":"date",
+				"field":"l3e_data_dellevento_odd"
+			},{
+				"label":"Tipologia di Evento",
+				"type":"text",
+				"field":"l3e_tipologia_di_evento_organizzato_"
+			},{
+				"label":"Tipologia di ospiti invitati",
+				"type":"unserialize",
+				"field":"l3e_tipologia_di_ospiti_invitati_per_odd_"
+			},{
+				"label":"Locandina",
+				"type":"img",
+				"field":"l3e_locandina_evento_odd"
+			},{
+				"label":"Descrizione dell'evento in 700 caratteri",
+				"type":"text",
+				"field":"l3p_il_nostro_open_data_day"
+			},{
+				"label":"Conclusioni e prossimi passi",
+				"type":"text",
+				"field":"l3p_conclusioni_e_prossimi_passi"
+			},{
+				"label":"Rassegna Stampa (link)",
+				"type":"repeater",
+				"field":"l3p_link"
+			},{
+				"label":"Rassegna Stampa (PDF)",
+				"type":"repeater",
+				"acf_parent":"file",
+				"acf_child":"file",
+				"field":"l3p_file"
+			},{
+				"label":"Evento finale (9 maggio)",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Tipologia di Evento",
+				"type":"text",
+				"field":""
+			},{
+				"label":"Tipologia di ospiti invitati",
+				"type":"text",
+				"field":""
+			}]
+	]},{
+		"screen":"Schermata 6",
+		"screen_id":"schermata_6",
+		"fields":[[{
+				"label":"Efficacia di reporting (su Monithon.it)",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Report su Monithon",
+				"type":"text",
+				"field":""
+			},{
+				"label":"video (ove presente)",
+				"type":"oembed",
+				"field":""
+			}]
+	]}]
+}
+
+
+ 
+ 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{section.screen}}</title>
+	<style>
+	.main .heading:hover{
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.main .heading.closed:before{
+		content:"\f138 ";
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	}
+
+	.main .heading.open:before{
+		content:"\f13a ";
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	}
+	</style>
+</head>
+<body>
+	<main class="container">
+		<div class="row">
+			<div class="col-md-9 main" >
+			{% for f in field %}
+				<div class="col-xs-12 main_item">
+				{% include f.type%}
+				</div>
+			{% endfor %}
+			</div>
+			<div class="aside col-md-3">
+			{% for f in context %}
+			{% include f.type%}
+			{% endfor %}
+			</div>
+		</div>
+	</main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script>
+		jQuery(function(){
+			//jQuery("h3.heading").addClass("closed");
+			//jQuery(".main_item").children(":not(.heading)").addClass("hidden");
+			//jQuery("h3").click(function(){
+			//	jQuery(this).siblings().toggleClass("hidden");
+			//	jQuery(this).toggleClass("closed");
+			//	jQuery(this).toggleClass("open");
+			//})
+		});
+
+	</script>
+</body>
+</html>

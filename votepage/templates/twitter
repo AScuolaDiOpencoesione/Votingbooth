@@ -1,0 +1,3 @@
+<div>
+<i class="fa fa-fw fa-twitter"></i><a target="_blank" href="https://twitter.com/{{f.field}}">{{f.field}}</a>
+</div>

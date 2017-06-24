@@ -1,0 +1,14 @@
+<h3 class="heading">{{f.label}}</h3>
+{%if f.field %}
+    {% if "<" in f.field %}
+        {{f.field|safe}}
+    {% else %}
+        <a  target="_blank" href="{{f.field}}">{{f.field}}</a>
+    {% endif %}
+{% else %}
+
+<div class="alert alert-danger">
+  <strong>Attenzione! </strong>Non è presente un contenuto per questo elemento di valutazione
+</div>
+
+{%endif%}

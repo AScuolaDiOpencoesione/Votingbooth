@@ -1,0 +1,17 @@
+<style type="text/css" media="screen">
+	.color-orange{
+		background-color: #F9E7C6;
+	}
+		.color-green{
+		background-color: #C6F9D3;
+	}
+		.color-blue{
+		background-color: #C6CBF9;
+	}
+		.color-yellow{
+		background-color: #F4F9C6;
+	}
+</style>
+<div class="jumbotron color-{{f.color}}" style="padding-top:10px;padding-left:30px;padding-bottom:10px;padding-right:30px;">
+<h3>{{f.label}}</h3>
+</div>

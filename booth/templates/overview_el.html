@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+	<h2>{{elem}}</h2>
+</div>
+
+<div class="container">	
+<table class="table">
+	<tr><td></td><th>Criteri di valutazione</th><th>Elementi per la valutazione</th><th>Voto</th></tr>
+	<tr class="color-orange"><td>A</td><th>Originalità del contenuto creativo del progetto e abilità comunicativa</th><th></th><th></th></tr>
+	<tr class="color-orange"><td>A1</td><td><a href="/session/{{session}}/{{element}}/19">Capacità di sintesi comunicativa</a></td><td>Pitch (Lezione 5)</td><td>{% if votes.0.votes.0.vote %}{{votes.0.votes.0.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-orange"><td>A2</td><td><a href="/session/{{session}}/{{element}}/20">Capacità di sintesi creativa</a></td><td>Elaborato Creativo (Lezione 5)</td><td>{% if votes.0.votes.1.vote %}{{votes.0.votes.1.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-orange"><td>A3</td><td><a href="/session/{{session}}/{{element}}/21">Efficacia materiale multimediale e coerenza di stile</a></td><td>Logo, galleria immagini, video monithon, locandina evento open data day</td><td>{% if votes.0.votes.2.vote %}{{votes.0.votes.2.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-blue"><td>B</td><th>Capacità di individuare, organizzare e valorizzare diverse fonti di dati e informazioni sugli interventi di OpenCoesione e sul territorio circostante </th><th></th><th></th></tr>
+	<tr class="color-blue"><td>B1</td><td><a href="/session/{{session}}/{{element}}/22">Capacità di progettazione</a></td><td>Canvas (Lezione 1), Ricerca Disegnata (Lezione 2)</td><td>{% if votes.0.votes.3.vote %}{{votes.0.votes.3.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-blue"><td>B2</td><td><a href="/session/{{session}}/{{element}}/23">Capacità di contestualizzare la ricerca</a></td><td>Research design (Lezione 2)</td><td>{% if votes.0.votes.4.vote %}{{votes.0.votes.4.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-blue"><td>B3</td><td><a href="/session/{{session}}/{{element}}/24">Capacità di analisi e visualizzazione dati (efficacia e coerenza data visualization, efficacia giornalistica)</td><td>Articolo dj e infografiche (Lezione 3)</td><td>{% if votes.0.votes.5.vote %}{{votes.0.votes.5.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-green"><td>C</td><th>Rilevanza del contenuto civico del progetto e dalla sua potenzialità in termini di impatto o coinvolgimento del territorio </th><th></th><th></th></tr>
+	<tr class="color-green"><td>C1</td><td><a href="/session/{{session}}/{{element}}/25">Efficacia di reporting monitoraggio civico (qualità di sintesi, rilevanza civica, approccio critico al tema)</a></td><td>report monithon (Lezione 4)</td><td>{% if votes.0.votes.6.vote %}{{votes.0.votes.6.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-green"><td>C2</td><td><a href="/session/{{session}}/{{element}}/26">Coinvolgimento territorio e organizzazione (evento + report evento)</a></td><td>Organizzazione evento ODD (Lezione 3), Report evento ODD (Lezione 3), Rassegna Stampa (Lezione 3)</td><td>{% if votes.0.votes.7.vote %}{{votes.0.votes.7.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+	<tr class="color-green"><td>C3</td><td><a href="/session/{{session}}/{{element}}/27">Giudizio complessivo sulla ricerca con particolare riferimento al suo impatto civico e alla sua sostenibilità</a></td><td>Coerenza di tutti gli output fin qui analizzati con l'obiettivo e il focus di ricerca (guardare anche la prospettiva di sostenibilità e prosecuzione autonoma con riferimento al 3° paragrafo del pitch)</td><td>{% if votes.0.votes.8.vote %}{{votes.0.votes.8.vote}}{% else %} Votazione non effettuata {% endif %}</td></tr>
+<!--
+	<tr class="color-yellow"><td>4</td><th>Interrelazione con l'esterno/integrazione con attività didattiche interne</th><th></th><th></th></tr>
+	<tr class="color-yellow"><td>4.1</td><td>Integrazione con le attività didattiche ordinarie</td><td>Voto effettuato nel report</td><td>{{votes.0.votes.9.vote}}</td></tr>
+	<tr class="color-yellow"><td>4.2</td><td>Attività Social </td><td>Klout Score</td><td>{{votes.0.votes.10.vote}}</td></tr>-->
+
+</table>
+
+</div>
+
+<style type="text/css" media="screen">
+	.color-orange{
+		background-color: #F9E7C6;
+	}
+		.color-green{
+		background-color: #C6F9D3;
+	}
+		.color-blue{
+		background-color: #C6CBF9;
+	}
+		.color-yellow{
+		background-color: #F4F9C6;
+	}
+</style>
+
+
+{% endblock content %}

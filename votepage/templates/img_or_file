@@ -1,0 +1,6 @@
+<h3 class="heading">{{f.label}}</h3>
+{%if f.field %}
+<div><a  target="_blank" href="{{f.field}}">Link all'originale</a></div>
+{% else %}
+
+{%endif%}

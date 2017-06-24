@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{%block top %}
+
+<form method="GET" action="/vote" class="ajaxform navbar-form navbar-left">
+	<div class="form-group">
+		<select class="form-control movement" type="hidden" name="item">
+			{% for i in move_items %}
+			<option value="{{i.id}}" {% if i.id == item.id %}selected{%endif%}>{{i}}</option>
+			{% endfor %}
+		</select>
+		<select class="form-control movement" type="hidden" name="element" style="width:300px">
+			{% for i in move_elements %}
+			<option value="{{i.id}}" {% if i.id == element.id %}selected{%endif%}>{{i.repr}}</option>
+			{% endfor %}
+		</select>
+	</div>
+</form>
+
+
+<script>
+function resize(){
+	var wh = jQuery(window).height()-50-100-2;
+	jQuery("#the_frame").height(wh);
+}
+jQuery(function(){
+	resize();
+});
+
+jQuery(window).on("resize", resize);
+
+	jQuery(".movement").change(function(){
+		window.location.href="/session/{{session.id}}/"+$(".movement[name=element]").val()+"/"+$(".movement[name=item]").val()
+	})
+</script>
+{% endblock top %}
+
+{% block content %}
+<iframe id="the_frame" src="{{item.iframe}}?{{element.field}}={{element.name}}" width="100%" height="800px"></iframe>
+{% endblock content %}
+
+{% block bottom %}
+    <style type="text/css" media="screen">
+    .navbar-fixed-bottom
+ {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+}
+.navbar-fixed-bottom li a{
+	height: 60px;
+	line-height: 50px;
+}
+.navbar-fixed-bottom form .btn {
+    height: 60px;
+    line-height: 50px;
+}
+      
+    </style>
+<ul class="nav navbar-nav navbar-left">
+	<li id="go_next"><p class="navbar-btn"><a class="btn btn-info btn-large" href="/session/{{session.id}}/{{element.id}}/{{item.id}}/prev">&lt; Indietro</a></p></li>
+</ul>
+<form method="GET" action="/session/{{session.id}}/vote" class="ajaxform navbar-form navbar-left">
+	<div class="form-group">
+		<input class="form-control" type="hidden" name="item" value="{{item.id}}">
+		<input class="form-control" type="hidden" name="element" value="{{element.id}}">
+		<input class="form-control" type="number" min="0" max="10" name="vote" value="{{vote.vote}}" style="width:400px"  placeholder="Inserisci un numero da 0 a 10">
+		<input class="form-control btn btn-warning btn-large" type="submit" name="cast" value="{% if vote.vote %}Clicca per modificare il voto{% else %}Clicca per Votare{% endif %}">
+	</div>
+</form> 
+<ul class="nav navbar-nav navbar-left">
+<li id="go_next"><p class="navbar-btn"><a class="btn btn-info btn-large" href="/session/{{session.id}}/{{element.id}}/{{item.id}}/next">Avanti &gt;</a></p></li>
+</ul>
+{% endblock bottom %}

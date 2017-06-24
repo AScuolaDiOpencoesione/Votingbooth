@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <div class="container">
+	    <div class="jumbotron">
+	    <h2>{{element.repr}}</h2>
+	    <h4>Ranking provvisorio (basato sui dati "grezzi" dei soli voti dei giurati)</h4>
+	    	<table class="table">
+	    		<tr><th>Pos.</th><th>ID ASOC</th><th>Team</th><th>Punteggio</th><th>Voto definitivo</th></tr>
+	    		{% for r in positions %}
+	    		<tr>{%for e in r %}<td>{{e|safe}}</td>{%endfor%}
+	    		{% endfor %}
+	    	</table>
+	    </div>
+    </div>
+    {%if global%}
+    <div class="container">
+    	<div class="col-md-6">
+    		<div class="panel panel-default">
+	    		<div class="panel-heading">
+	    			Voti dati per team
+	    		</div>
+	    		<div class="panel-body">
+	    			<table class="table">
+	    			<tr><th>Team</th><th>Stato</th><th>Voto completo</th><th>Criterio D</th></tr>
+	    			{% for element in elements %}
+	    			<tr><td><a href="?element={{element.id}}">{{element.repr}}</a></td>
+	    			<td>{{element.votes_given}}/{{element.votes_to_give}}</td>
+	    			<td>{% if element.is_done %}Finito{%endif%}</td>
+	    			<td>{{element.extras.crit_D}}</td></tr>
+	    			{% endfor %}
+	    			</table>
+	    		</div>
+	    	</div>
+    	</div>
+    	<div class="col-md-3">
+    		<div class="panel panel-default">
+	    		<div class="panel-heading">
+	    			Voti dati per giurato
+	    		</div>
+	    		<div class="panel-body">
+	    			<table class="table">
+	    			{% for user in users %}
+	    				{% if user.votes_to_give > 0 %}
+	    					<tr><td>{{user}}</td><td>{{user.votes_given}}/{{user.votes_to_give}}</td><td>{% if user.is_done %}Finito{%endif%}</td></tr>
+	    				{% endif %}
+	    			{% endfor %}
+	    			</table>
+	    		</div>
+	    	</div>
+    	</div>
+    	<div class="col-md-3">
+	    	<div class="panel panel-default">
+	    		<div class="panel-heading">
+	    			Voti dati globali
+	    		</div>
+	    		<div class="panel-body">
+	    				<h1>{{votes_given}}/{{votes_to_give}} ({{votes_percent}}%)</h1>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    {%else%}
+    <div class="container">
+		    <table class="table">
+		    	<tr>
+		    		<th></th>
+					{% for i in items %}	     	
+						<th>{{i}}</th>
+					{% endfor %}
+					<th>D - Integrazione Social</th>
+					<th>Valore totale</th>
+				</tr>
+
+				{% for e in votes %}	     	
+				<tr>
+					<th>{{e.element.username}}</th>
+					{% for i in e.votes %}
+						<td><a href="/session/{{element.session.id}}/{{element.id}}/{{i.item.id}}" data-toggle="tooltip" data-placement="top" title="{{i.item}}">
+							{% if i.vote %}
+							<i class="fa fa-fw  fa-2x fa-check-square" style="color:green"></i>
+							{% else %}
+							<i class="fa fa-fw fa-2x  fa-square" style="color:red"></i>
+							{% endif %}
+								<span class="vote">{{i.vote}}</span>
+							</div>
+						</a></td>
+					{% endfor %}
+					<td>{{e.crit_D}}</td>
+					<td>{{e.average}}</td>
+				</tr>
+				{% endfor %}
+				<tr>
+					<td></td>
+					{% for avg in avgs %}
+						<td>{{avg}}</td>
+					{% endfor %}
+					<td></td>
+				</tr>
+
+
+		    </table>
+     </div>
+     {%endif%}
+     <script>
+     	$("*").tooltip();
+     </script>
+{% endblock content %}

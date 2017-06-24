@@ -1,0 +1,375 @@
+{
+	"db":"http://api.ascuoladiopencoesione.it/voting/page?",
+	"db_meta":"http://api.ascuoladiopencoesione.it/voting/meta/?",
+	"dimension":"ID_ASOC",
+	"shared":[{
+				"label":"Nome Team",
+				"type":"text",
+				"field":"profilo.name"
+			},{
+				"label":"",
+				"type":"img_nolink",
+				"field":"profilo.profile_image"
+			},{
+				"label":"",
+				"type":"schoolblog1617",
+				"field":"profilo.ID"
+			},{
+				"label":"Progetto OC",
+				"type":"text",
+				"field":"report.3"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.4"
+			},{
+				"label":"",
+				"type":"text",
+				"field":"report.5"
+			},{
+				"label":"Tema OC",
+				"type":"text",
+				"field":"report.6"
+			},{
+				"label":"Account Twitter",
+				"type":"twitter",
+				"field":"profilo.twitter"
+			},{
+				"label":"Account altro social",
+				"type":"urlable_nullable",
+				"field":"profilo.website"
+			}],
+	"structure":[{
+		"screen":"Capacità di sintesi comunicativa",
+		"screen_id":"schermata_1",
+		"fields":[
+			[{
+				"label":"A - Originalità del contenuto creativo del progetto e abilità comunicativa",
+				"type":"ubersection",
+				"field":"",
+				"color":"orange"
+			},{
+				"label":"A1 - Capacità di sintesi comunicativa",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elemento di valutazione: <b>Pitch</b> (output Lezione 5).<br>Il Pitch, suddiviso in tre parti, deve riassumere in modo chiaro ed efficace: 1) il cuore della ricerca: il progetto, la scelta fatta, i dati trovati; 2) le scoperte fatte; 3) le proposte per continuare a seguire e monitorare il progetto."
+			},{
+				"label":"Pitch - Descrizione del progetto scelto e motivazione",
+				"type":"text",
+				"field":"report.68"
+			},{
+				"label":"Pitch - Descrizione delle fasi significative della ricerca",
+				"type":"text",
+				"field":"report.69"
+			},{
+				"label":"Pitch - Proposte e follow-up",
+				"type":"text",
+				"field":"report.70"
+			}]
+	]},{
+		"screen":"Capacità di sintesi creativa",
+		"screen_id":"schermata_2",
+		"fields":[[{
+				"label":"A - Originalità del contenuto creativo del progetto e abilità comunicativa",
+				"type":"ubersection",
+				"field":"",
+				"color":"orange"
+			},{
+				"label":"A2 - Capacità di sintesi creativa",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elemento di valutazione: <b>Elaborato creativo</b> (output Lezione 5).<br />L'elaborato creativo può essere di diversi formati (video, podcast radio, cartone animato, slides, presentazione dinamica, collage, etc). Nel caso del format video, l'indicazione è stata quella di non superare i 3 minuti di durata. L'elaborato creativo deve saper raccontare in modo avvincente e originale il lavoro di ricerca effettuato."
+			},{
+				"label":"Elaborato creativo finale",
+				"type":"url_or_iframe",
+				"field":"report.71"
+			}]
+	]},{
+		"screen":"Efficacia materiale multimediale e coerenza di stile",
+		"screen_id":"schermata_3",
+		"fields":[[{
+				"label":"A - Originalità del contenuto creativo del progetto e abilità comunicativa",
+				"type":"ubersection",
+				"field":"",
+				"color":"orange"
+			},{
+				"label":"A3 - Efficacia materiale multimediale e coerenza di stile",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elementi di valutazione: <b>Logo</b> (output Lezione 1), <b>Galleria immagini</b> (output Lezione 5), <b>Video monitoraggio civico Monithon</b> (output Lezione 4), <b>Locandina evento Open Data Day</b> (output 1.2 Lezione 3). Si valuta qui la coerenza stilistica, l'originalità, l'efficacia di contenuti e l'accuratezza del materiale multimediale prodotto dai team scuole lungo tutto il percorso didattico ASOC."
+			},{
+				"label":"Logo",
+				"type":"img",
+				"field":"profilo.profile_image"
+			},{
+				"label":"Galleria Immagini",
+				"type":"content",
+				"field":"",
+				"value":""
+			},{
+				"label":"",
+				"type":"img",
+				"field":"report.75"
+			},{
+				"label":"",
+				"type":"img_nullable",
+				"field":"report.76"
+			},{
+				"label":"",
+				"type":"img_nullable",
+				"field":"report.88"
+			},{
+				"label":"",
+				"type":"img_nullable",
+				"field":"report.77"
+			},{
+				"label":"",
+				"type":"img_nullable",
+				"field":"report.89"
+			},{
+				"label":"Video Monithon",
+				"type":"url_or_iframe",
+				"field":"report.64"
+			},{
+				"label":"Locandina evento Open Data Day",
+				"type":"img",
+				"field":"report.40"
+			}]
+	]},{
+		"screen":"Schermata 4",
+		"screen_id":"schermata_4",
+		"fields":[[{
+				"label":"B - Capacità di individuare, organizzare e valorizzare diverse fonti di dati e informazioni sugli interventi di OpenCoesione e sul territorio circostante ",
+				"type":"ubersection",
+				"field":"",
+				"color":"blue"
+			},{
+				"label":"B1 - Capacità di progettazione ",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elementi di valutazione: <b>La ricerca in 140 caratteri</b> (output Lezione 1), <b>Canvas</b> (output Lezione 1), <b>Ricerca disegnata</b> (output Lezione 2).<br /> Si valutano qui le capacità progettuali del team, a partire dalle motivazioni che hanno portato alla scelta del progetto OpenCoesione (breve descrizione in 140 caratteri, come se fosse un tweet), per passare poi alla capacità di schematizzazione e modellizzazione del progetto attraverso il Canvas (eventualmente anche in una versione originale disegnata o realizzata con strumenti di elaborazione grafica) e la Ricerca disegnata scelta per rappresentare il percorso della ricerca (che può essere una timeline, un diagramma di flusso o una mappa concettuale)."
+			},{
+				"label":"La ricerca in 140 caratteri",
+				"type":"text",
+				"field":"report.2"
+			},{
+				"label":"Canvas",
+				"type":"img_or_file",
+				"field":"report.9"
+			},{
+				"label":"La ricerca disegnata",
+				"type":"img",
+				"field":"report.20"
+			}]
+	]},{
+		"screen":"Schermata 5",
+		"screen_id":"schermata_5",
+		"fields":[[{
+				"label":"B - Capacità di individuare, organizzare e valorizzare diverse fonti di dati e informazioni sugli interventi di OpenCoesione e sul territorio circostante ",
+				"type":"ubersection",
+				"field":"",
+				"color":"blue"
+			},{
+				"label":"B2 - Capacità di contestualizzare la ricerca",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elementi di valutazione: <b>Research Design</b> (output Lezione 5), <b>Link istituzionali e altre fonti</b> (output Lezione 2).<br> Sulla base del modello di Research Design fornito (foglio di calcolo), è stato chiesto ai team di contestualizzare la ricerca, organizzando le fonti e i link. In questo ambito si valuta quindi tale capacità, tenendo anche presente la coerenza dei link istituzionali e ad altre fonti che i team hanno indicato (escludendo da tale valutazione i link al portale OpenCoesione)."
+			},{
+				"label":"Link allo schema di research design (allegato xls)",
+				"type":"file",
+				"field":"report.72"
+			},{
+				"label":"Fonti istituzionali",
+				"type":"url_nullable",
+				"field":"report.13"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.14"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.15"
+			},{
+				"label":"Link altre fonti",
+				"type":"url_nullable",
+				"field":"report.16"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.17"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.18"
+			}]
+	]},{
+		"screen":"Schermata 6",
+		"screen_id":"schermata_6",
+		"fields":[[{
+				"label":"B - Capacità di individuare, organizzare e valorizzare diverse fonti di dati e informazioni sugli interventi di OpenCoesione e sul territorio circostante ",
+				"type":"ubersection",
+				"field":"",
+				"color":"blue"
+			},{
+				"label":"B3 - Capacità di analisi e visualizzazione dati (efficacia e coerenza data visualization, efficacia giornalistica)",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elemento di valutazione: <b>Articolo di Data Journalism con grafici e infografiche</b> (output 1.1 Lezione 3)<br>L’articolo di Data Journalism deve essere quanto più chiaro ed esaustivo possibile, deve saper descrivere in modo analitico ed efficace il contesto della ricerca, i dati raccolti, le informazioni rilevate, con l’ausilio di grafici e infografiche esplicative. Si valuta qui, inoltre, l’efficacia e la coerenza degli elementi di Data Visualization, oltre che l’efficacia giornalistica."
+			},{
+				"label":"Articolo Datajournalism",
+				"type":"section_data",
+				"field":"report.21"
+			},{
+				"label":"",
+				"type":"img_nullable",
+				"field":"report.22"
+			},{
+				"label":"",
+				"type":"long_text",
+				"field":"report.23"
+			},{
+				"label":"",
+				"type":"img_nullable",
+				"field":"report.24"
+			},{
+				"label":"",
+				"type":"long_text",
+				"field":"report.25"
+			},{
+				"label":"",
+				"type":"long_text",
+				"field":"report.26"
+			},{
+				"label":"",
+				"type":"long_text",
+				"field":"report.27"
+			},{
+				"label":"Visualizzazione interattiva (ove presente)",
+				"type":"url_nullable",
+				"field":"report.26"
+			}]
+	]},{
+		"screen":"Schermata 7",
+		"screen_id":"schermata_7",
+		"fields":[[{
+				"label":"C - Rilevanza del contenuto civico del progetto e dalla sua potenzialità in termini di impatto o coinvolgimento del territorio ",
+				"type":"ubersection",
+				"field":"",
+				"color":"green"
+			},{
+				"label":"C1 - Efficacia di reporting monitoraggio civico (qualità di sintesi, rilevanza civica, approccio critico al tema)",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elemento di valutazione: <b>Report Monithon</b> (output Lezione 4)<br> Nel valutare il report di monitoraggio civico pubblicato dai team delle scuole sul portale Monithon, si deve valutare sia l’impianto complessivo sia, più specificamente, elementi come la qualità di sintesi, la rilevanza civica dell’attività di reporting, l’approccio critico al tema."
+			},{
+				"label":"Report su Monithon",
+				"type":"iframe_url",
+				"field":"report.55"
+			}]
+	]},{
+		"screen":"Schermata 8",
+		"screen_id":"schermata_8",
+		"fields":[[{
+				"label":"C - Rilevanza del contenuto civico del progetto e dalla sua potenzialità in termini di impatto o coinvolgimento del territorio ",
+				"type":"ubersection",
+				"field":"",
+				"color":"green"
+			},{
+				"label":"C2 - Coinvolgimento territorio e organizzazione (evento + report evento)",
+				"type":"section",
+				"field":""
+			},{
+				"label":"Criterio di valutazione",
+				"type":"content",
+				"field":"",
+				"value":"Elementi di valutazione: <b>Organizzazione evento Open Data Day</b> (output 1.2 Lezione 3), <b>Report evento Open Data Day</b> (output 1.3 Lezione 3), <b>Rassegna Stampa</b> (output 1.3 Lezione 3). <br> Si valutano qui le capacità di engagement e organizzative, soprattutto in relazione all’evento Open Data Day, alla cui realizzazione e/o partecipazione sono stati chiamati tutti i team. Tali capacità sono desumibili dalla scheda organizzativa dell’evento, dal resoconto effettuato successivamente e dalla rassegna stampa."
+			},{
+				"label":"Descrizione dell'evento in 700 caratteri",
+				"type":"long_text",
+				"field":"report.44"
+			},{
+				"label":"Osservazioni sui temi",
+				"type":"long_text",
+				"field":"report.45"
+			},{
+				"label":"Resoconto dell'Open Data Day",
+				"type":"long_text",
+				"field":"report.46"
+			},{
+				"label":"Rassegna Stampa (link)",
+				"type":"url_nullable",
+				"field":"report.47"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.51"
+			},{
+				"label":"",
+				"type":"url_nullable",
+				"field":"report.50"
+			},{
+				"label":"Rassegna Stampa (PDF)",
+				"type":"file_nullable",
+				"field":"report.48"
+			},{
+				"label":"",
+				"type":"file_nullable",
+				"field":"report.52"
+			},{
+				"label":"",
+				"type":"file_nullable",
+				"field":"report.53"
+			}]
+	]},{
+		"screen":"Schermata 9",
+		"screen_id":"schermata_9",
+		"fields":[[{
+				"label":"C - Rilevanza del contenuto civico del progetto e dalla sua potenzialità in termini di impatto o coinvolgimento del territorio ",
+				"type":"ubersection",
+				"field":"",
+				"color":"green"
+			},{
+				"label":"C3 - Giudizio complessivo sulla ricerca, con particolare riferimento al suo impatto civico e alla sua sostenibilità",
+				"type":"section",
+				"field":""
+			},{
+				"label":"",
+				"type":"content_large",
+				"field":"",
+				"value":"Adesso esprima un giudizio complessivo sul lavoro di ricerca fin qui analizzato, con riferimento particolare al suo impatto civico e alle sue potenzialità di sviluppo e di prosecuzione autonoma, oltre che alla coerenza di tutti gli output fin qui esaminati con l’obiettivo e il focus della ricerca."
+			}]
+	]}]
+}
+
+
+ 
+ 

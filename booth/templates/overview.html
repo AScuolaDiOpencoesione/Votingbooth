@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block content %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+	    <div class="jumbotron">
+	    	<h3 data-toggle="collapse" data-target="#demo" style="cursor: pointer;"><i class=" fa fa-fw fa-plus"></i>REGOLAMENTO CONCORSO <small><a href="http://www.ascuoladiopencoesione.it/wp-content/uploads/2017/04/ASOC1617_Regolamento_concorso_linee_guida.pdf" target="_blank">Scarica PDF</a></small></h3>
+	    	<div id="demo" class="collapse">
+	    		Le scuole selezionate per partecipare all’iniziativa “A Scuola di OpenCoesione” concorrono all’assegnazione di premi. 
+	    		La commissione giudicatrice è composta da rappresentanti dell’iniziativa OpenCoesione, del MIUR, della Rappresentanza in Italia della Commissione 
+	    		Europea, di enti e fondazioni di ricerca, del mondo dell’informazione, ed è chiamata a selezionare <b>i team che hanno consegnato le 10 migliori ricerche</b> di 
+	    		monitoraggio civico tra quelle che entro la data del <b>20 aprile 2017</b> hanno realizzato e consegnato tutti gli elaborati previsti. 
+	    		<br/>La data indicata è da considerarsi non prorogabile e la consegna entro la scadenza è da considerarsi requisito indispensabile per la partecipazione al concorso. 
+	    		<br/>L’intera classe <b>prima classificata</b> vincerà un viaggio di istruzione di due giorni a Bruxelles, finanziato dalla Rappresentanza in Italia della Commissione Europea. L’intera classe <b>seconda classificata</b> vincerà una visita dedicata presso la sede istituzionale del Senato della Repubblica. La Top Ten, composta dall’intera classe vincitrice, l’intera classe seconda classificata, l’intera classe terza classificata e una rappresentanza di 2 studenti e un docente per il gruppo delle altre 7 scuole ritenute migliori, sarà invitata a un ciclo di eventi a Roma nei giorni 24 e 25 maggio, secondo il seguente programma:
+				<ul>
+				<li>24 maggio pomeriggio: accoglienza e animazione su progetti dedicati ai giovani in Europa presso la sede della Rappresentanza Europea in Italia;</li>
+				<li>24 maggio pomeriggio (per la sola classe seconda classificata): visita alla sede del Senato;</li>
+				<li>25 maggio mattina (per tutte le scuole): evento di presentazione e premiazione finale a Roma;</li>
+				<li>6 e 7 giugno: per la sola classe prima classificata, viaggio premio a Bruxelles con visita alle istituzioni
+				europee, incontro con rappresentanti della DG REGIO e altre attività.</li>
+				</ul>
+				La commissione è perciò chiamata a selezionare:
+				<ul>
+				<li>Primo Premio: viaggio a Roma (24-25 maggio) e visita presso le istituzioni europee a Bruxelles (6-7 giugno)</li>
+				<li>Secondo premio: viaggio a Roma e visita dedicata presso la sede del Senato della Repubblica</li>
+				<li>Premio TopTen: viaggio a Roma del team terzo classificato + una rappresentanza di due studenti e un docente per le altre 7 scuole della Top Ten. I team presenteranno la loro ricerca durante l’evento di presentazione finale del 25 maggio a Roma.</li>
+				</ul>
+	    	</div>
+	    </div>
+
+		<div>
+		    <table class="table">
+		    	<tr>
+		    		<th></th>
+					{% for i in items %}	     	
+						<th>{{i}}</th>
+					{% endfor %}
+					<th>Voto finale</th>
+				</tr>
+
+				{% for e in votes %}	     	
+				<tr>
+					<th><a href="/session/{{session}}/{{e.element.id}}">{{e.element}}</a></th>
+					{% for i in e.votes %}
+						<td><a href="/session/{{session}}/{{e.element.id}}/{{i.item.id}}" data-toggle="tooltip" data-placement="top" title="{{i.item}}">
+							{% if not i.vote is None  %}
+							<i class="fa fa-fw  fa-2x fa-check-square" style="color:green"></i> {{i.vote}}
+							{% else %}
+							<i class="fa fa-fw fa-2x  fa-square"       style="color:red"></i>
+							{% endif %}
+						</a></td>
+					{% endfor %}
+					<td>{{e.average|floatformat:2}}</td>
+				</tr>
+				{% endfor %}
+				<tr>
+					<td></td>
+					{% for avg in avgs %}
+						<td>{{avg|floatformat:2}}</td>
+					{% endfor %}
+					<td></td>
+				</tr>
+
+
+		    </table>
+	     </div>
+     </div>
+     <script>
+     	$("*").tooltip();
+     </script>
+{% endblock content %}

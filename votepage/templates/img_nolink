@@ -1,0 +1,2 @@
+<h3 class="heading">{{f.label}}</h3>
+<div><img class="img-responsive" src="{{f.field}}"></div>
